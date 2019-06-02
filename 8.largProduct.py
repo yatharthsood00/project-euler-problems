@@ -2,17 +2,20 @@ n = 7316717653133062491922511967442657474235534919493496983520312774506326239578
 nStr = str(n)
 nStr.split()
 nStr = list(map(int, nStr))
-maxProd, maxProdCurr, i,k = 1,1,0,0
+maxProd = 1
+maxProdCurr = 1
+i = 0
+k = 0
+
 for i in range(0, 987):
-	for k in range(0,14):
+	for k in range(0,13):
 		#print(nStr[i+k])
 		maxProdCurr = maxProdCurr * nStr[i+k]
-		if maxProdCurr == 0:
-			break
-		#print(maxProdCurr)
-	if maxProd <= maxProdCurr:
+		print(maxProdCurr)
+	if maxProd < maxProdCurr:
 		maxProd = maxProdCurr
 		print("change")
-	print("here")	
-print(maxProd)
-print(maxProdCurr)
+	maxProdCurr = 1
+	#print("here")	
+print("final maxProd: ", maxProd)
+print("final maxProdCurr: ",maxProdCurr)

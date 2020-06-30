@@ -11,7 +11,9 @@ for i in range(100, 1000):
 			#		lis.append(prod)
 			#		print(prod)
 		else:
-			if prodS[0] == prodS[5]:
+			if prod < 100000:
+				continue
+			elif prodS[0] == prodS[5]:
 				if prodS[1] == prodS[4]:
 					if prodS[2] == prodS[3]:
 						lis.append(prod)
